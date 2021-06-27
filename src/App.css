@@ -13,3 +13,10 @@
   background-image: linear-gradient(72deg, #FBDA61 0%, #d972bc 100%);
   
 }
+.productos{
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-size: xx-small;
+  text-align: center;
+  margin: 1rem;
+}

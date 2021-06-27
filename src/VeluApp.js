@@ -5,11 +5,10 @@ import { ItemListContainer } from './components/ItemListContainer';
 
 
 export const VeluApp = () => {
-  const greating ="Próximos lanzamientos...";
   return (
     <div>
      <NavBar />
-     <ItemListContainer greating={greating}/>
+     <ItemListContainer/>
     </div>
   )
 }

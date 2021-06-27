@@ -1,10 +1,9 @@
 import React from 'react';
-import {ItemList} from './components/ItemList';
+import {ItemList} from './ItemList';
 
-export const ItemListContainer = (props) => {
+export const ItemListContainer = () => {
     return (
         <div>
-            <h5 className="text-center font-italic">{ props.greating }</h5>
             <ItemList />
         </div>
     )
