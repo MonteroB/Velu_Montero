@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { itemsData } from "./Item";
+import { ItemCount } from "./ItemCount";
 
 export function ItemList() {
-  const [numero, setNumero] = useState(0);
   const [items, setItems] = useState([0]);
 
   useEffect(() => {
@@ -11,34 +11,18 @@ export function ItemList() {
     }, 2000);
   });
 
-  const handleIncrement = () => {
-    setNumero(numero + 1);
-  };
-
-  const handleDecrement = () => {
-    setNumero(numero - 1);
-  };
-
   return (
-    <div className="productos">
+    <div className="row row-cols-5">
       {items.map((item, idx) => {
         return (
-        <div className="row row-cols-4 row-cols-md-4">
-         <div className="col mb-4">
-          <div className="card border-dark" key={idx}>
-              <img src={item.pictureURL} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h6 className="card-title">Aroma {item.name}</h6>
+          <div className="card productos border-dark" key={idx}>
+              <img src={item.pictureURL} className="card-img-top" alt="vela aromática" />
+              <div className="card-body productosTexto">
+                <h6 className="card-title"> {item.name}</h6>
                 <p className="card-text"> {item.price}</p>
-                <div>
-                <p>{numero}</p>
-                <button className="btn-dark" onClick={handleIncrement}>+</button>
-                <button className="btn-dark" onClick={handleDecrement}>-</button>
-                </div>
+                <ItemCount stock="15" initial="1"/>
               </div>
           </div>
-         </div>
-        </div>
         );
       })}
     </div>
