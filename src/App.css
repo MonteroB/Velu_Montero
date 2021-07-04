@@ -21,16 +21,29 @@ body{
   background-image: url(https://images.pexels.com/photos/6479606/pexels-photo-6479606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); 
 }
 .productos{
-  text-align: center;
-  margin: 1rem;
-  height: fit-content;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 2%;
 }
 .productosTexto{
   font-family: 'Roboto', sans-serif;
   color: black;
-  font-size: x-small;
+  text-justify: distribute;
+  text-align: center;
 }
 .btn-group{
   padding: 1%;
   letter-spacing: 2%;
+}
+.quantity{
+  size: 10%;
+}
+.lineaTitulo{
+  text-align: center;
+  padding: 1%;
+  color: white;
+  font-family: 'PT Serif', serif;
+  background-image: url(https://images.pexels.com/photos/1152359/pexels-photo-1152359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

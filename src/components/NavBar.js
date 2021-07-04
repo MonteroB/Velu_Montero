@@ -1,5 +1,6 @@
 import React from 'react';
 import { CartWidget } from './CartWidget';
+import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
     return (
@@ -12,23 +13,15 @@ export const NavBar = () => {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
          <ul className="navbar-nav mr-auto">
+         <li className="nav-item active">
+           <a className="nav-link texto" href="/"><Link to={"/"}>Home</Link><span className="sr-only">(current)</span></a>
+          </li>
           <li className="nav-item active">
-           <a className="nav-link texto" href="/">Tienda <span className="sr-only">(current)</span></a>
+           <a className="nav-link texto" href="/"><Link to={"/tienda"}>Tienda</Link><span className="sr-only">(current)</span></a>
           </li>
           <li className="nav-item">
-           <a className="nav-link texto" href="/">Nosotros</a>
+           <a className="nav-link texto" href="/"><Link to={"/nosotros"}>Nosotros</Link></a>
           </li>
-          <li className="nav-item dropdown">
-           <a className="nav-link dropdown-toggle texto" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Lineas
-           </a>
-            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-             <a className="dropdown-item texto" href="/">Deseos</a>
-             <a className="dropdown-item texto" href="/">Relajación</a>
-              <div className="dropdown-divider"></div>
-             <a className="dropdown-item texto" href="/">Nativa</a>
-           </div>
-         </li>
          <li className="nav-item">
           <a className="nav-link disabled texto" href="/" tabIndex="-1" aria-disabled="true">Aromas</a>
          </li>

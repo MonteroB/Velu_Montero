@@ -12,15 +12,16 @@ export function ItemList() {
   });
 
   return (
-    <div className="row row-cols-5">
+    <div className="row linea">
+      <h3 className="col-sm-12 lineaTitulo">Summer Vibes</h3>
       {items.map((item, idx) => {
         return (
-          <div className="card productos border-dark" key={idx}>
+          <div className="col-sm-2 card productos border-dark" key={idx}>
               <img src={item.pictureURL} className="card-img-top" alt="vela aromática" />
               <div className="card-body productosTexto">
                 <h6 className="card-title"> {item.name}</h6>
                 <p className="card-text"> {item.price}</p>
-                <ItemCount stock="15" initial="1"/>
+                <ItemCount stock={5} initial={1}/>
               </div>
           </div>
         );
