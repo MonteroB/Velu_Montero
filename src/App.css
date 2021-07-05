@@ -17,23 +17,51 @@ body{
 .texto:hover{
   color: white;
 }
-.navbar-color{
-  background-image: url(https://images.pexels.com/photos/6479606/pexels-photo-6479606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); 
+.navbar {
+	display: flex;
+	background: rgb(29, 25, 25);
+	max-height: 2.4rem;
+  padding: 0px;
 }
+
+ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+
+.nav-link {
+	color: white;
+	list-style-type: none;
+	font-size: auto;
+}
+
 .productos{
   margin: auto;
-  margin-top: 1%;
-  margin-bottom: 2%;
 }
 .productosTexto{
   font-family: 'Roboto', sans-serif;
   color: black;
-  text-justify: distribute;
   text-align: center;
+  size: 30%;
+}
+.card-body{
+  justify-content: center;
+}
+.detailBox{
+  border: black 1px solid;
 }
 .btn-group{
+  size: 1rem;
   padding: 1%;
   letter-spacing: 2%;
+}
+.footer{
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+  color:whitesmoke;
+  text-align: center;
 }
 .quantity{
   size: 10%;

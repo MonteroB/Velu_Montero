@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { NavBar } from './components/NavBar';
 import './App.css';
 import { ItemListContainer } from './components/ItemListContainer';
+import {ItemDetailContainer} from './components/ItemDetailContainer';
 import { Footer } from './components/Footer';
 import { Home } from './components/Home';
 import { Nosotros } from './components/Nosotros';
@@ -16,9 +17,15 @@ export const VeluApp = () => {
        <Route exact path="/">
          <Home />
        </Route>
-       <Route path="/tienda">
-        <ItemListContainer/>
-       </Route>
+        <Route path="/items">    
+          <ItemListContainer />
+        </Route>
+        <Route path="/category/:categoryName">
+          <ItemListContainer />
+        </Route>
+        <Route path="/item/:id">
+          <ItemDetailContainer />
+        </Route>
        <Route path="/nosotros">
          <Nosotros />
        </Route>
@@ -28,7 +35,6 @@ export const VeluApp = () => {
      </Switch>
      <Footer />
     </BrowserRouter>
-    
   )
 }
 

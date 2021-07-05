@@ -3,10 +3,8 @@ import React from 'react'
 export const Footer = () => {
     return (
         <div className="container">
-            <div className="row">
-                <div className="productosTexto">
-                    <h3>Footer de VeluApp</h3>
-                </div>
+            <div className="row footer">
+                    <h6>Footer de VeluApp</h6>
             </div>
             
         </div>
