@@ -1,10 +1,12 @@
 body{
   overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
 }
 .velu{
   font-family: 'PT Serif', serif;
-  color: antiquewhite;
-  font-size: x-large;
+  color: white;
+  font-size: xx-large;
 }
 .velu:hover{
   color: white;
@@ -12,15 +14,16 @@ body{
 .texto{
   font-family: 'Roboto', sans-serif;
   color: antiquewhite;
-  font-size: x-small;
+  font-size: small;
 }
 .texto:hover{
   color: white;
 }
 .navbar {
 	display: flex;
+  position: sticky;
 	background: rgb(29, 25, 25);
-	max-height: 2.4rem;
+	max-height: 3rem;
   padding: 0px;
 }
 
@@ -37,14 +40,14 @@ ul {
 	font-size: auto;
 }
 
-.productos{
+.card{
   margin: auto;
 }
 .productosTexto{
   font-family: 'Roboto', sans-serif;
   color: black;
   text-align: center;
-  size: 30%;
+  font-size: xx-small;
 }
 .card-body{
   justify-content: center;
@@ -53,8 +56,8 @@ ul {
   border: black 1px solid;
 }
 .btn-group{
-  size: 1rem;
-  padding: 1%;
+  size: 0.5rem;
+  padding: 2%;
   letter-spacing: 2%;
 }
 .footer{

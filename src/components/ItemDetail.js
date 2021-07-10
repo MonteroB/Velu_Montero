@@ -1,21 +1,24 @@
-import React from 'react';
-import {ItemCount} from './ItemCount';
+import React from 'react'
+import { useCartContext } from '../context/CartContext';
+import {ItemCount} from './ItemCount';
 
-const ItemDetail = ({ title, description, price, pictureUrl}) => {
-    return (
-        <div className="container">
-            <div className="row detailBox">
-                <div className="col-sm-6">
-                 <img src={pictureUrl} alt={title} className="img-fluid mx-auto"/>
-                </div>
-                <div className="col-sm-6 detailBox">
-                 <h3>{title}</h3>
-                 <h6>Precio: ${price}</h6>
-                 <ItemCount stock={5} initial={1}/>
-                 <h6>{description}</h6>
-                </div>
-            </div>            
+export const ItemDetail = ({ product }) => {
+  const { addToCart } = useCartContext();
+  const onAdd = qty => addToCart(product, qty);
+  return (
+        <div className="container">
+          <div className="row detailBox">
+           <div className="col-sm-6">
+            <img src={product.pictureUrl} alt={product.title} className="img-fluid mx-auto"/>
+            </div>
+             <div className="col-sm-6 detailBox">
+             <h3>{product.title}</h3>
+             <h6>Precio: ${product.price}</h6>
+             {product.stock > 0 && <ItemCount onAdd={onAdd} stock={product.stock} />}
+             <h6>{product.description}</h6>
+            </div>
+          </div>            
         </div>
-    )
+  )
 }
-export default ItemDetail
+

@@ -7,10 +7,12 @@ import {ItemDetailContainer} from './components/ItemDetailContainer';
 import { Footer } from './components/Footer';
 import { Home } from './components/Home';
 import { Nosotros } from './components/Nosotros';
-import { Carrito } from './components/Carrito';
+import {CartProvider} from './context/CartContext'
+import { Cart } from './components/Cart';
 
 export const VeluApp = () => {
   return (
+    <CartProvider>
     <BrowserRouter>
      <NavBar />
      <Switch>
@@ -29,12 +31,13 @@ export const VeluApp = () => {
        <Route path="/nosotros">
          <Nosotros />
        </Route>
-       <Route path="/carrito">
-         <Carrito />
+       <Route path="/cart">
+         <Cart />
        </Route>
      </Switch>
      <Footer />
     </BrowserRouter>
+    </CartProvider>
   )
 }
 

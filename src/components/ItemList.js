@@ -1,9 +1,10 @@
 import React from 'react';
 import Item from './Item';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const ItemList = ({ items }) => {
-  const history = useHistory();const handleChange = (e) => {
+  const history = useHistory();
+  const handleChange = (e) => {
     if (e.target.value)
     history.push(`/category/${e.target.value}`)
     }

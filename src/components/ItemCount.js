@@ -1,27 +1,15 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 
-export const ItemCount = ({initial, stock}) => {
-    const [numero, setNumero] = useState(initial);
-    
-    const handleIncrement = () => {
-      if(numero < stock) {
-        setNumero(numero + 1);
-      } 
-    };
-  
-    const handleDecrement = () => {
-      if(numero > initial) {
-        setNumero(numero - 1);
-      } 
-    };
-    return (
-        <div className="quantity">
-            <div className="btn-group" role="group" aria-label="Basic example">
-                <button className="btn-info btn-sm" onClick={handleIncrement}>+</button>
-                <p className="productosTexto"> {numero}</p>
-                <button className="btn-info btn-sm" onClick={handleDecrement}>-</button>
-                </div>
-                <button type="button" className="btn btn-outline-dark btn-sm productosTexto">Añadir</button>
-        </div>
-    )
+export const ItemCount = ({ stock, onAdd }) => {
+  const [toAdd, setToAdd] = useState(stock ? 1 : 0);
+  return (
+    <div style={{ fontSize: 20, display: 'flex', flexDirection: 'column' }}>
+      <div>
+        <button className="btn btn-dark" onClick={() => setToAdd(toAdd - 1 ? toAdd - 1 : toAdd)}>-</button>
+        <span>{toAdd}</span>
+        <button className="btn btn-dark" onClick={() => setToAdd(toAdd === stock ? toAdd : toAdd + 1)}> +</button >
+      </div>
+      <button className="btn btn-info" onClick={() => onAdd(toAdd)}>Añadir al carrito</button>
+    </div >
+  )
 }
