@@ -9,7 +9,7 @@ body{
   font-size: xx-large;
 }
 .velu:hover{
-  color: white;
+  color: whitesmoke;
 }
 .texto{
   font-family: 'Roboto', sans-serif;
@@ -55,16 +55,13 @@ ul {
 .detailBox{
   border: black 1px solid;
 }
-.btn-group{
-  size: 0.5rem;
-  padding: 2%;
-  letter-spacing: 2%;
-}
 .footer{
+  display: flex;
   background-color: black;
   font-family: 'Roboto', sans-serif;
   color:whitesmoke;
   text-align: center;
+  align-items: center;
 }
 .quantity{
   size: 10%;
