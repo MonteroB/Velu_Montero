@@ -1,5 +1,5 @@
-import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
+import { itemsCollection } from "../firebase";
 
 export const CartContext = createContext({});
 
@@ -7,8 +7,9 @@ export const useCartContext  =() => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [productsInCart, setProductsInCart] = useState(0);
 
-  const [database, setDatabase] = useState([]);
+  const [providerLoading, setProviderLoading] = useState (true)
 
   const clearCart = () => setCart([]);
 
@@ -27,13 +28,27 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  useEffect(() => {
-    (async () => {
-      const { data } = await axios.get("https://www.mocky.io/v3/cc0beaaf-5580-4ccc-af3d-6c6483b8a24a");
-      setDatabase(data);
-    })();
-  }, []);
-  return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, database }}>
+ const realStock = product => {
+     const foundItem = cart.find(e => e.id === product.id);
+     return foundItem ? product.stock - foundItem.quantity : product.stock;
+ };
+
+ useEffect(() => {
+     const localCart = localStorage.getItem('cart');
+     if (!localCart) localStorage.setItem('cart', JSON.stringify([]));
+     else setCart(JSON.parse(localCart));
+     setProviderLoading(false);
+ },[]);
+
+ useEffect(() => {
+     localStorage.setItem('cart',JSON.stringify(cart));
+     const inCart = cart.reduce((acc, item) => {
+         return acc + item.quantity;
+     }, 0);
+     setProductsInCart(inCart);
+ }, [cart]);
+
+  return <CartContext.Provider value={{ cart, setCart, clearCart, addToCart, realStock, providerLoading, productsInCart }}>
     {children}
   </CartContext.Provider>
 }
