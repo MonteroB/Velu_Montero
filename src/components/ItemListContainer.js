@@ -8,8 +8,8 @@ export const ItemListContainer = () => {
 const [items, setItems]= useState([])
 useEffect(() => {
     (async () => {
-        const reponse = await itemsCollection.get();
-       setItems(reponse.docs.map(item => ({id: item.id, ...item.data()})))
+        const response = await itemsCollection.get();
+       setItems(response.docs.map(doc => doc.data()))
     })();
 }, [])
 
