@@ -9,12 +9,12 @@ const [items, setItems]= useState([])
 useEffect(() => {
     (async () => {
         const response = await itemsCollection.get();
-       setItems(response.docs.map(doc => doc.data()))
+       setItems(response.docs.map(doc => ({ ...doc.data(), id: doc.id })))
     })();
 }, [])
 
   return (
-    <ItemList items={[items]} />
+    <ItemList items={items} />
   )
 }
 
