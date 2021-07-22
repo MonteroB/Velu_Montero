@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { itemsCollection } from "../firebase";
 
 export const CartContext = createContext({});
 
