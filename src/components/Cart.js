@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../context/CartContext';
+import { DatosCompra } from './DatosCompra';
 
 export const Cart = () => {
   const { cart, clearCart, removeItem, providerLoading } = useCartContext();
@@ -19,6 +20,8 @@ export const Cart = () => {
       </div>  
       ))}
      <p class="card-text">Total: ${cart.reduce((acc, {quantity, price}) => acc + quantity * price, 0).toFixed(2)}</p>
+     //Formulario de datos del comprador
+   <DatosCompra />
    <button class="btn btn-success">CONFIRMAR COMPRA</button>
    <button class="btn btn-secondary" onClick={clearCart}>VACIAR CARRITO</button>
   <div class="card-footer text-muted">
