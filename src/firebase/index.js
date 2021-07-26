@@ -15,3 +15,5 @@ import 'firebase/firestore';
   const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();;
 
   export const itemsCollection = firebase.firestore(app).collection("items");
+
+  export const db = firebase.firestore(app);
