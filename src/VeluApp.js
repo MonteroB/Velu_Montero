@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import { NavBar } from './components/NavBar';
 import './App.css';
 import { ItemListContainer } from './components/ItemListContainer';
@@ -23,7 +23,7 @@ export const VeluApp = () => {
           <ItemListContainer />
         </Route>
         <Route path="/category/:categoryName">
-          <ItemListContainer />
+           <ItemListContainer />
         </Route>
         <Route path="/item/:id">
           <ItemDetailContainer />
