@@ -14,19 +14,20 @@ export const ItemDetail = ({ product }) => {
   return (
         <div className="container">
           <div className="row detailBox">
-           <div className="col-sm-6">
-            <img src={product.pictureUrl} alt={product.title} className="img-fluid mx-auto"/>
+           <div className="col-sm-4">
+            <img src={product.pictureUrl} alt={product.title} className="img-fluid mx-auto rounded-circle p-2"/>
             </div>
-             <div className="col-sm-6 detailBox">
+             <div className="col-sm-4 p-3">
              <h3>{product.title}</h3>
-             <h4>Precio: ${product.price}</h4>
+             <p>{product.description}</p>
+             </div>
+             <div className="col-sm-4">
+             <h5>Precio: ${product.price}</h5>
              {stock > 0 ? <>
-               <h6>Stock: {stock}</h6>
+               <p>Stock: {stock}</p>
               <ItemCount onAdd={onAdd} stock={stock} /> 
               </> : <h2>Sin stock</h2>}
-              {show ? <Link to={"/cart"}><button className="btn btn-success">Terminar mi compra</button></Link> : null}
-             <h6>{product.description}</h6>
-            </div>
+              {show ? <Link to={"/cart"}><button className="btn btn-outline-primary m-1">Terminar mi compra</button></Link> : null}     </div>
           </div>            
         </div>
   )

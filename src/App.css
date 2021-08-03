@@ -5,19 +5,19 @@ body{
 }
 .velu{
   font-family: 'PT Serif', serif;
-  color: white;
+  color: rgb(26, 24, 24);
   font-size: xx-large;
 }
 .velu:hover{
-  color: whitesmoke;
+  color: rgb(53, 48, 48);
 }
 .texto{
   font-family: 'Roboto', sans-serif;
-  color: antiquewhite;
-  font-size: small;
+  color: rgb(12, 11, 11);
+  text-shadow: 2px 2px #edeff1;
 }
 .texto:hover{
-  color: white;
+  color: rgb(51, 47, 47);
 }
 
 .form-container {
@@ -36,9 +36,9 @@ body{
 .navbar {
 	display: flex;
   position: sticky;
-	background: rgb(29, 25, 25);
 	max-height: 3rem;
   padding: 0px;
+  margin-top: 0px;
 }
 
 ul {
@@ -49,13 +49,14 @@ ul {
 }
 
 .nav-link {
-	color: white;
+	color: rgb(8, 8, 8);
 	list-style-type: none;
 	font-size: auto;
 }
 
 .card{
   margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .productosTexto{
   font-family: 'Roboto', sans-serif;
@@ -65,9 +66,10 @@ ul {
 }
 .card-body{
   justify-content: center;
+  padding: 0px;
 }
 .detailBox{
-  border: black 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 .footer{
   display: flex;
@@ -76,6 +78,21 @@ ul {
   color:whitesmoke;
   text-align: center;
   align-items: center;
+}
+.home{
+  background-image: url(https://images.pexels.com/photos/3066868/pexels-photo-3066868.jpeg?cs=srgb&dl=pexels-thevibrantmachine-3066868.jpg&fm=jpg);
+  background-size: cover;
+  padding: 30vh;
+  opacity: 0.85;
+}
+.nosotros{
+  background-image: url(https://images.pexels.com/photos/4199098/pexels-photo-4199098.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4199098.jpg&fm=jpg);
+  background-size: cover;
+  text-align: right;
+  padding: 25vh;
+}
+.imgCart{
+  width:75%;
 }
 .quantity{
   size: 10%;

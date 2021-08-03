@@ -10,7 +10,7 @@ export const ItemCount = ({ stock, onAdd }) => {
         <span>{toAdd}</span>
         <button className="btn btn-dark" onClick={() => setToAdd (toAdd === stock ? toAdd : toAdd + 1)}>+</button >
       </div>
-      <button id="comprar" className="btn btn-info" onClick={() => onAdd(toAdd)}>COMPRAR</button>
+      <button id="comprar" className="btn btn-outline-success" onClick={() => onAdd(toAdd)}>COMPRAR</button>
     </div >
   )
 }
