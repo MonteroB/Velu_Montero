@@ -1,3 +1,7 @@
+# Velu
+
+Velu es un proyecto de web app e-commerce de velas aromáticas. Su utilización permite crear ordenes de compra de diferentes productos que se almacenarán en una base de datos de Firebase.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
