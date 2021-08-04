@@ -21,7 +21,7 @@ Velu es un proyecto de web app e-commerce de velas aromáticas. Su utilización 
 - Firebase/Firestore.
 
 ## Demostración:
-![](gif de giphy)
+![](https://media1.giphy.com/media/ATlKVKznxvQTwqrvWv/giphy.gif?cid=790b76117fd7d3155ce5b9404d1c1207d84ac1b5d328e95f&rid=giphy.gif&ct=g)
 
 
 # Getting Started with Create React App
