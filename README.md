@@ -2,6 +2,28 @@
 
 Velu es un proyecto de web app e-commerce de velas aromáticas. Su utilización permite crear ordenes de compra de diferentes productos que se almacenarán en una base de datos de Firebase.
 
+## Caracteríasticas incluidas
+-Página principal.
+- Tienda con listado de todos los artículos disponibles.
+- Barra de navegación (usando React Router): link por categoría, carrito de compras.
+- Filtrado de vistas por categoría, id.
+- Detalle de los productos.
+- Carrito de compras.
+- Uso de Firebase.
+- Context para uso de las propiedades entre componentes.
+
+# Tecnologías, librerías, frameworks, plataformas usadas:
+- JavaScript.
+- CSS.
+- HTML.
+- React.
+- Bootstrap 4.
+- Firebase/Firestore.
+
+## Demostración:
+![](gif de giphy)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

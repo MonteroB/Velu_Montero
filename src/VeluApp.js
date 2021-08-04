@@ -22,9 +22,9 @@ export const VeluApp = () => {
         <Route path="/items">    
           <ItemListContainer />
         </Route>
-        <Route path="/category/:categoryName">
-           <ItemListContainer />
-        </Route>
+        <Route path="/category/:category">
+        <ItemListContainer />
+        </Route>
         <Route path="/item/:id">
           <ItemDetailContainer />
         </Route>

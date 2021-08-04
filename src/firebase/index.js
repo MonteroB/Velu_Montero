@@ -17,3 +17,8 @@ import 'firebase/firestore';
   export const itemsCollection = firebase.firestore(app).collection("items");
 
   export const db = firebase.firestore(app);
+  
+  export const getFirestore = () => {
+    return firebase.firestore(app);
+
+}
