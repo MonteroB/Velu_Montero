@@ -23,17 +23,6 @@ useEffect( () => {        
             })
             .catch((e) => {console.log(e)})
         }, [category]);
-    
-
-/*   FILTRO POR AROMA
-const { category } = useParams();
-const categoryElements = itemsCollection.where('category', '==', categoryName);
-categoryElements.get().then((querySnapshot) => {
-    if(querySnapshot.size === 0) {
-        console.log('no results');
-    }
-    setItems(querySnapshot.docs.map(doc => doc.data()));
-}); */
 
   return (
     <ItemList items={items} />
